@@ -3,6 +3,7 @@ package com.devmmurray.firebaseshop.ui
 import android.app.Activity
 import android.os.Build
 import android.view.LayoutInflater
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
@@ -27,3 +28,7 @@ fun Activity.hideStatusBar() {
         )
     }
 }
+
+fun View.show() { this.visibility = View.VISIBLE }
+fun View.hide() { this.visibility = View.INVISIBLE }
+fun View.gone() { this.visibility = View.GONE }

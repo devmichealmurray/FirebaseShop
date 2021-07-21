@@ -1,4 +1,4 @@
-package com.devmmurray.firebaseshop.ui
+package com.devmmurray.firebaseshop.ui.view.activities
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity

@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseShop">
-        <activity android:name=".ui.RegisterActivity"
+        <activity android:name=".ui.view.fragments.RegisterFragment"
             android:screenOrientation="nosensor"
             android:theme="@style/Theme.FirebaseShop.NoActionBar" />
         <activity
-            android:name=".ui.LoginActivity"
+            android:name=".ui.view.activities.LoginActivity"
             android:screenOrientation="nosensor"
             android:theme="@style/Theme.FirebaseShop.NoActionBar" />
         <activity
-            android:name=".ui.SplashActivity"
+            android:name=".ui.view.activities.SplashActivity"
             android:screenOrientation="nosensor"
             android:theme="@style/Theme.FirebaseShop.NoActionBar">
             <intent-filter>
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.view.activities.MainActivity"
             android:screenOrientation="nosensor"
             android:theme="@style/Theme.FirebaseShop.NoActionBar" />
     </application>

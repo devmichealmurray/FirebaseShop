@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background"
-        tools:context=".ui.LoginActivity">
+        tools:context=".ui.view.activities.LoginActivity">
 
         <FrameLayout
             android:id="@+id/fl_header_image"
@@ -55,11 +55,21 @@
                 android:id="@+id/et_first_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textPersonName"
                 android:padding="16dp"
                 android:textColor="@color/reg_text"
                 android:textSize="16sp"
                 tools:text="abc@gmail.com" />
+
+            <com.devmmurray.firebaseshop.utils.custom_views.MontRegTextView
+                android:id="@+id/first_name_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Enter A Your First Name"
+                android:textColor="@color/warning_red"
+                android:gravity="end"
+                android:visibility="gone"
+                android:textSize="12sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -80,11 +90,21 @@
                 android:id="@+id/et_last_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textPersonName"
                 android:padding="16dp"
                 android:textColor="@color/reg_text"
                 android:textSize="16sp"
                 tools:text="abc@gmail.com" />
+
+            <com.devmmurray.firebaseshop.utils.custom_views.MontRegTextView
+                android:id="@+id/last_name_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Enter A Your Last Name"
+                android:textColor="@color/warning_red"
+                android:gravity="end"
+                android:visibility="gone"
+                android:textSize="12sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -105,11 +125,21 @@
                 android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:padding="16dp"
                 android:textColor="@color/reg_text"
                 android:textSize="16sp"
                 tools:text="abc@gmail.com" />
+
+            <com.devmmurray.firebaseshop.utils.custom_views.MontRegTextView
+                android:id="@+id/email_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Enter A Valid Email"
+                android:textColor="@color/warning_red"
+                android:gravity="end"
+                android:visibility="gone"
+                android:textSize="12sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -135,6 +165,27 @@
                 android:textColor="@color/reg_text"
                 android:textSize="16dp"
                 tools:text="123456" />
+
+            <com.devmmurray.firebaseshop.utils.custom_views.MontRegTextView
+                android:id="@+id/password_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Enter A Valid Password"
+                android:textColor="@color/warning_red"
+                android:gravity="end"
+                android:visibility="gone"
+                android:textSize="12sp"/>
+
+            <com.devmmurray.firebaseshop.utils.custom_views.MontRegTextView
+                android:id="@+id/password_match_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Passwords Do Not Match"
+                android:textColor="@color/warning_red"
+                android:gravity="end"
+                android:visibility="gone"
+                android:textSize="12sp"/>
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -145,7 +196,7 @@
             android:layout_marginStart="22dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="22dp"
-            android:hint="Password"
+            android:hint="Confirm Password"
             android:textColorHint="@color/colorThemeOrange"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -189,11 +240,13 @@
             android:layout_marginTop="22dp"
             android:layout_marginEnd="22dp"
             android:background="@drawable/shape_btn_background"
+            android:alpha="0.5"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
             android:text="Register"
+            android:enabled="false"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
