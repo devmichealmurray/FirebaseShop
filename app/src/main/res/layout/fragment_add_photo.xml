@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/add_photo_frag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/new_photo_image"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:layout_margin="24dp"
+            android:elevation="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/img_no_user"/>
+
+        <com.devmmurray.firebaseshop.utils.custom_views.CustomButton
+            android:id="@+id/select_image_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Image"
+            android:textColor="@color/background"
+            android:layout_margin="24dp"
+            android:background="@drawable/shape_btn_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_photo_image"/>
+
+        <com.devmmurray.firebaseshop.utils.custom_views.CustomButton
+            android:id="@+id/upload_image_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Image"
+            android:textColor="@color/background"
+            android:layout_margin="24dp"
+            android:background="@drawable/shape_btn_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/select_image_btn"/>
+
+        <TextView
+            android:id="@+id/success_error_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:textSize="18sp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upload_image_btn"
+            tools:text="Image Upload Success"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

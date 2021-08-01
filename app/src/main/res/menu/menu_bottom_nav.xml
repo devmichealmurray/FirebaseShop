@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="ifRoom"
+        android:title="Dashboard" />
+
+    <item
+        android:id="@+id/productsFragment"
+        android:icon="@drawable/ic_products"
+        app:showAsAction="ifRoom"
+        android:title="Products" />
+
+    <item
+        android:id="@+id/ordersFragment"
+        android:icon="@drawable/ic_shopping_cart"
+        app:showAsAction="always"
+        android:title="Orders" />
+
+    <item
+        android:id="@+id/userProfileFragment"
+        android:icon="@drawable/ic_user"
+        app:showAsAction="always"
+        android:title="Account" />
+
+</menu>

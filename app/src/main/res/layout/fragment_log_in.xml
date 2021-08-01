@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="224dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/auth_screens_background" />
+                android:src="@drawable/img_splash_background" />
 
             <com.devmmurray.firebaseshop.utils.custom_views.MontBoldTextView
                 android:id="@+id/login_title_tv"
@@ -154,16 +154,40 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_forgot_password" />
 
+        <com.devmmurray.firebaseshop.utils.custom_views.CustomButton
+            android:id="@+id/btn_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="22dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@drawable/shape_google_btn_background"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:elevation="7dp"
+            android:text="   Sign In With Google"
+            android:drawableStart="@drawable/googleg_standard_color_18"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:textColor="@color/reg_text"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:paddingBottom="12dp"
             android:gravity="center"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_login">
+            app:layout_constraintTop_toBottomOf="@id/btn_google">
 
             <com.devmmurray.firebaseshop.utils.custom_views.MontRegTextView
                 android:id="@+id/tv_don_t_have_an_account"
@@ -171,24 +195,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:padding="4dp"
-                android:text="I Do Not Have An Account"
+                android:layout_gravity="center_vertical"
+                android:text="Don't Have An Account?"
                 android:textColor="@color/reg_text"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <com.devmmurray.firebaseshop.utils.custom_views.MontBoldTextView
                 android:id="@+id/tv_register"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:layout_marginStart="22dp"
+                android:layout_marginStart="4dp"
                 android:layout_marginEnd="22dp"
                 android:gravity="center"
-                android:background="@drawable/shape_outline_button"
+                android:layout_gravity="center_vertical"
                 android:foreground="?attr/selectableItemBackground"
-                android:padding="10dp"
                 android:text="REGISTER"
                 android:textColor="@color/colorThemeOrange"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

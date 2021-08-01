@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.devmmurray.firebaseshop">
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,13 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseShop">
-        <activity android:name=".ui.view.fragments.RegisterFragment"
-            android:screenOrientation="nosensor"
-            android:theme="@style/Theme.FirebaseShop.NoActionBar" />
+
         <activity
             android:name=".ui.view.activities.LoginActivity"
             android:screenOrientation="nosensor"
             android:theme="@style/Theme.FirebaseShop.NoActionBar" />
+
         <activity
             android:name=".ui.view.activities.SplashActivity"
             android:screenOrientation="nosensor"
@@ -26,6 +30,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name=".ui.view.activities.MainActivity"
             android:screenOrientation="nosensor"

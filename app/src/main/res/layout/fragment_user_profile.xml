@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.devmmurray.firebaseshop.utils.custom_views.MontBoldTextView
+            android:id="@+id/profile_header"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/img_splash_background"
+            android:gravity="center_vertical"
+            android:text="Account Profile"
+            android:paddingStart="12dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.devmmurray.firebaseshop.utils.custom_views.MontBoldTextView
+            android:id="@+id/log_out_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/log_out_icon"/>
+
+        <ImageView
+            android:id="@+id/log_out_icon"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="2dp"
+            app:tint="@color/white"
+            android:clickable="true"
+            android:src="@drawable/ic_log_out"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/settings_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_settings"
+            android:padding="4dp"
+            android:layout_margin="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/profile_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/colorThemeOrange" />
+
+
+        <ImageView
+            android:id="@+id/user_profile_image"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/img_no_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_header"
+            app:shapeAppearanceOverlay="@style/roundedCornersImageView" />
+
+        <Button
+            android:id="@+id/add_photo_fab"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:backgroundTint="@color/background"
+            android:background="@drawable/shape_circle"
+            android:paddingBottom="0dp"
+            android:paddingTop="16dp"
+            android:paddingStart="1dp"
+            android:paddingEnd="0dp"
+            android:elevation="4dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginStart="160dp"
+            android:drawableBottom="@drawable/ic_add"
+            android:drawableTint="@color/background"
+            app:layout_constraintStart_toStartOf="@id/user_profile_image"
+            app:layout_constraintTop_toTopOf="@id/user_profile_image"/>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_first_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="22dp"
+            android:hint="First Name"
+            android:textColorHint="@color/colorThemeOrange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_profile_image">
+
+            <com.devmmurray.firebaseshop.utils.custom_views.CustomEditText
+                android:id="@+id/et_user_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColor="@color/reg_text"
+                android:textSize="16sp"
+                tools:text="abc@gmail.com" />
+
+            <com.devmmurray.firebaseshop.utils.custom_views.MontRegTextView
+                android:id="@+id/first_name_update_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Name Updated"
+                android:textColor="@color/warning_red"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_last_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="22dp"
+            android:hint="Last Name"
+            android:textColorHint="@color/colorThemeOrange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_first_name">
+
+            <com.devmmurray.firebaseshop.utils.custom_views.CustomEditText
+                android:id="@+id/et_user_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColor="@color/reg_text"
+                android:textSize="16sp"
+                tools:text="abc@gmail.com" />
+
+            <com.devmmurray.firebaseshop.utils.custom_views.MontRegTextView
+                android:id="@+id/last_name_update_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Name Updated"
+                android:textColor="@color/warning_red"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_user_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="22dp"
+            android:hint="Email"
+            android:textColorHint="@color/colorThemeOrange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_last_name">
+
+            <com.devmmurray.firebaseshop.utils.custom_views.CustomEditText
+                android:id="@+id/et_user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColor="@color/reg_text"
+                android:textSize="16sp"
+                tools:text="abc@gmail.com" />
+
+            <com.devmmurray.firebaseshop.utils.custom_views.MontRegTextView
+                android:id="@+id/email_update_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Email Updated"
+                android:textColor="@color/warning_red"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_phone_number"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="22dp"
+            android:hint="Phone Number"
+            android:textColorHint="@color/colorThemeOrange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_user_email">
+
+            <com.devmmurray.firebaseshop.utils.custom_views.CustomEditText
+                android:id="@+id/et_user_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColor="@color/reg_text"
+                android:textSize="16sp"
+                tools:text="abc@gmail.com" />
+
+            <com.devmmurray.firebaseshop.utils.custom_views.MontRegTextView
+                android:id="@+id/number_update_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Phone Number Updated"
+                android:textColor="@color/warning_red"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/gender_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_phone_number">
+
+            <com.devmmurray.firebaseshop.utils.custom_views.BoldRadioButton
+                android:id="@+id/male_radio_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="MALE"
+                android:elevation="7dp"
+                android:checked="true"
+                android:button="@null"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_margin="14dp"
+                android:textColor="@drawable/selector_gender_tab_text"
+                android:layout_weight="1"
+                android:background="@drawable/selector_gender_tab_selector"/>
+
+            <com.devmmurray.firebaseshop.utils.custom_views.BoldRadioButton
+                android:id="@+id/female_radio_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="FEMALE"
+                android:checked="false"
+                android:elevation="7dp"
+                android:button="@null"
+                android:padding="8dp"
+                android:gravity="center"
+                android:layout_margin="14dp"
+                android:textColor="@drawable/selector_gender_tab_text"
+                android:layout_weight="1"
+                android:background="@drawable/selector_gender_tab_selector"/>
+
+        </RadioGroup>
+
+        <com.devmmurray.firebaseshop.utils.custom_views.CustomButton
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save My Profile"
+            android:elevation="7dp"
+            android:background="@drawable/shape_btn_background"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gender_radio_group"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
